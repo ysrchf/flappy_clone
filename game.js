@@ -42,6 +42,11 @@ var mainState = {
         game.physics.arcade.overlap(this.bird, this.pipes, this.hitPipe, null, this);
 
         // Rotate the bird
+<<<<<<< HEAD
+=======
+        if (this.bird.angle < 20)
+            this.bird.angle += 1;
+>>>>>>> jump
     },
 
     jump: function() {
@@ -52,7 +57,11 @@ var mainState = {
         this.bird.body.velocity.y = -350;
 
         // Jump animation
+<<<<<<< HEAD
 
+=======
+        game.add.tween(this.bird).to({angle: -20}, 100).start();
+>>>>>>> jump
     },
 
     hitPipe: function() {
@@ -98,4 +107,8 @@ var mainState = {
 };
 
 game.state.add('main', mainState);
+<<<<<<< HEAD
 game.state.start('main'); 
+=======
+game.state.start('main');
+>>>>>>> jump
